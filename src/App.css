@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+* {
+  padding:  0;
+  margin:   0;
+  box-sizing: border-box;
+  
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  margin: 50px auto;
+  width: 1460px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ /* Header */
+ 
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  border-bottom: 5px solid black;
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.header-nav {
+  list-style: none;
+}
+
+.header_blog {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-nav {
+  display: flex;
+  align-items: center;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+  margin-left: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: rgb(100, 100, 100);
+}
+
+.nav-item:first-child {
+  margin: 0;
+}
+
+.header-img {
+  background: url(components/images/BG.jpg) no-repeat center;
+  background-size: cover;
+
+  width: 100%;
+  height: 550px;
+  border-radius: 8px;
+  position: relative
+}
+
+.header-img::before {
+  content: "Лучший интернет-магазин фильмов";
+  font-size: 60px;
+  font-weight: 400;
+  color: rgb(234, 234, 234);
+  position: absolute;
+  top: 35%;
+  left: 9.5%;
+}
+
+.header-img::after {  
+  content: "Films Shop";
+  font-size: 60px;
+  font-weight: 700;
+  color: rgb(232, 228, 228);
+  position: absolute;
+  top: 55%;
+  left: 37%;
 }
