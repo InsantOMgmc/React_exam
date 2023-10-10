@@ -1,16 +1,19 @@
 import './App.css';
-import Header from './components/header';
-import Main from './components/main';
-import Footer from './components/footer';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Login from './components/login'
+import Index from './components';
+import Register from './components/register';
 
 function App() {
   return (
-    <div className="wrapper">
-      <Header/>
-      <Main/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Index/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/register' element={<Register/>} />
+      </Routes>
+    </Router>
+    
   );
 }
 

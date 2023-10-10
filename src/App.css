@@ -42,7 +42,7 @@
 
 .nav-item {
   margin-left: 55px;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   transition: color 0.2s ease;
 }
@@ -62,6 +62,8 @@
   width: 100%;
   height: 550px;
   border-radius: 8px;
+  margin-bottom: 90px;
+
   position: relative
 }
 
@@ -83,4 +85,100 @@
   position: absolute;
   top: 55%;
   left: 37%;
+}
+
+
+/* Main */
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1.5px solid black;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* films */
+
+.films-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.film-item {
+  width: 32%;
+  padding: 20px 10px;
+  
+  margin-bottom: 30px;
+  border: 1.5px solid #000;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+  padding: 50px 100px 100px 150px;
+}
+
+.footer-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-item {
+  height: 100px;
+}
+
+.footer-title {
+  margin-bottom: 10px;
+}
+
+.footer-ul {
+  list-style: none;
+}
+
+.cl-white {
+  color: #fff;
+}
+.cl-gray {
+  font-size: 16px;
+  color: gray;
+}
+
+/* Adaptive */
+
+
+@media screen and (max-width: 1460px) {
+  .wrapper {
+    width: 1000px;
+  }
+  .nav-item {
+    font-size: 16px;
+    margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    width: 700px;
+  }
+  .film-item {
+    width: 48%;
+  }
+  .nav-item {
+    font-size: 16px;
+    margin-left: 35px;
+  }
 }

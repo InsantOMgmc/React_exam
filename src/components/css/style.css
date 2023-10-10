@@ -1,0 +1,54 @@
+.container {
+    width: 450px;
+    margin: 10% auto;
+}
+.login-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mb-20 {
+    margin-bottom: 30px;
+}
+.input-data {
+    width: 100%;
+    padding: 15px 30px;
+    
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgb(228, 228, 228);
+}
+.login-btn {
+    width: 100%;
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(129, 129, 255);
+    color: #fff;
+    cursor: pointer;
+}
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+.rem-forgot-block {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+}
+.chek-rem {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.gray {
+    color: gray;
+}
+.register {
+    cursor: pointer;
+}
+.register:active {
+    transform: scale(0.95);
+}
