@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
@@ -70,7 +71,7 @@ const movies = [
         creators: 'Режисеры фильма 6'
     },
     {
-        id: 1,
+        id: 7,
         title: 'Фильм 1',
         story: 'История фильма 1...',
         price: 20,
@@ -81,7 +82,7 @@ const movies = [
         creators: 'Режисеры фильма 1'
     },
     {
-        id: 2,
+        id: 8,
         title: 'Фильм 1',
         story: 'История фильма 2...',
         price: 20,
@@ -92,7 +93,7 @@ const movies = [
         creators: 'Режисеры фильма 2'
     },
     {
-        id: 3,
+        id: 9,
         title: 'Фильм 3',
         story: 'История фильма 3...',
         price: 20,
@@ -103,7 +104,7 @@ const movies = [
         creators: 'Режисеры фильма 3'
     },
     {
-        id: 4,
+        id: 10,
         title: 'Фильм 4',
         story: 'История фильма 4...',
         price: 20,
@@ -114,7 +115,7 @@ const movies = [
         creators: 'Режисеры фильма 4'
     },
     {
-        id: 5,
+        id: 11,
         title: 'Фильм 5',
         story: 'История фильма 5...',
         price: 20,
@@ -125,7 +126,7 @@ const movies = [
         creators: 'Режисеры фильма 5'
     },
     {
-        id: 6,
+        id: 12,
         title: 'Фильм 6',
         story: 'История фильма 6...',
         price: 20,
@@ -138,7 +139,17 @@ const movies = [
 
 ];
 
-export default function index() {
+export default function Index() {
+
+    const [currentUser, setCurrentUser] = useState(null);
+
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+        if (user) {
+            setCurrentUser(user);
+        }
+    }, []);
+
     return (
         <div>
             <div className='wrapper'>
@@ -156,9 +167,13 @@ export default function index() {
                                 <li className='nav-item'>Контакты</li>
                                 <li className='nav-item'>Правила</li>
                                 <li className='nav-item person-logo'>
-                                    <Link to='login'>
-                                        <BsPersonCircle />
-                                    </Link>
+                                    {currentUser ? (
+                                        currentUser.username
+                                    ) : (
+                                        <Link to='login'>
+                                            <BsPersonCircle />
+                                        </Link>
+                                    )}
                                 </li>
                             </ul>
                         </nav>
